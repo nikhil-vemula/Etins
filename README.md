@@ -2,7 +2,7 @@ Startup website for **Etins**
 
 
 ## Technologies Used
-## Firebase Api
+### Firebase Api
 ### CSS frameworks:BootStrap 
 ### JS frameworks:jQuery
 
