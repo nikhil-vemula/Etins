@@ -7,7 +7,7 @@ Startup website for **Etins**
 ### JS frameworks:jQuery
 
 ## Screen Shots
-![Alt text](./scrshots/scr1.png?raw=true "Home")
+![Alt text](./scrshots/scr1.PNG?raw=true "Home")
 
 ## Contact
 #### Developer/Projects spokesman
