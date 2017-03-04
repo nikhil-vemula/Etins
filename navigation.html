@@ -1,0 +1,25 @@
+<!-- navigation start-->
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div id="navigation" class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="./index.html">Startup</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <script>
+        function toggle_active()
+        {
+          $("home-nav").removeClass('active');
+          $(this).addClass('active');
+        }
+      </script>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="./register.html"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+      <li><a style="display: none;" href="#" id="login" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><a style="display: block;" href="#" id="logout" onclick="signOut()"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- navigation end-->

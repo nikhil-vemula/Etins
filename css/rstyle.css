@@ -1,0 +1,114 @@
+body{
+    background-color: #CCCCFF;
+}
+.container-fluid {
+    padding: 0px;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+}
+.navbar-inverse .navbar-brand {
+    color: #fff;
+}
+.navbar-inverse .navbar-nav > li > a,{
+    color: #fff;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .active > a:hover {
+    color: #fff;
+    background-color: #6666FF;
+}
+.navbar{
+    border-bottom-color: #fff;
+    background:#9999FF; 
+    padding-left:10px;
+    padding-right:10px;
+    border-radius: 0px;
+    margin-bottom:0px;
+}
+.container-fluid .jumbotron {
+    margin: 0px;
+}
+#map{
+    margin:10px;
+    width: 100%; 
+    height: 400px;
+}
+#myCarousel{
+    margin: 0px;
+}
+#show
+{
+    width: 100%;
+    height: 500px;
+}
+#form-panel{
+    padding :10px;
+    margin: 10px;
+}
+#about > ul{
+    list-style-type: none;
+}
+#body{
+    margin-top:60px;
+}body{
+    background-color: #CCCCFF;
+}
+.container-fluid {
+    padding: 0px;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+}
+.navbar-inverse .navbar-brand {
+    color: #fff;
+}
+.navbar-inverse .navbar-nav > li > a,{
+    color: #fff;
+}
+.navbar-inverse .navbar-nav > li > a:focus,
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #fff;
+    background-color: #6666FF;
+}
+.navbar{
+    border-bottom-color: #fff;
+    background:#9999FF; 
+    padding-left:10px;
+    padding-right:10px;
+    border-radius: 0px;
+    margin-bottom:0px;
+}
+.container-fluid .jumbotron {
+    margin: 0px;
+}
+#map{
+    margin:10px;
+    width: 100%; 
+    height: 400px;
+}
+#myCarousel{
+    margin: 0px;
+}
+#show
+{
+    width: 100%;
+    height: 500px;
+}
+#form-panel{
+    margin: 10px;
+}
+#about > ul{
+    list-style-type: none;
+}
+#body{
+    margin-top:60px;
+}
+.windows8 {
+	position: relative;
+	width: 76px;
+	height:76px;
+	margin:auto;
+}
+

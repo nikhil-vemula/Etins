@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Startup</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.3.2/firebase.js"></script>
+    <script src="./js/script.js"></script>
+</head>
+<body>
+<!-- navigation start-->
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div id="navigation" class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="./index.html">Startup</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <script>
+        function toggle_active()
+        {
+          $("home-nav").removeClass('active');
+          $(this).addClass('active');
+        }
+      </script>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./user.html">Dashboard</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a style="display: block;" href="#" id="logout" onclick="signOut()"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- navigation end-->
+<div class="container-fluid">
+    <div class="panel panel-default" style="margin-top:60px;">
+        <div class="panel-heading"><h4>Dash Board</h4></div>
+            <div class="panel-body">
+            <button onclick="displayItems()">Click!!</button>
+            <ul id="itemList"></ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="footer">
+    <script>
+    $(function(){
+      $("#footer").load("footer.html"); 
+    });</script>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Startup</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="./css/rstyle.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.3.2/firebase.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+    function hi(){
+        firebase.auth().createUserWithEmailAndPassword('vsrinivasanikhil@gmail.com', 'password').catch(function(error) {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        });
+        alert("created");
+    }
+    function get()
+    {
+        var user = firebase.auth().currentUser;
+        var name, email, photoUrl, uid;
+
+        if (user != null) {
+        name = user.displayName;
+        email = user.email;
+        photoUrl = user.photoURL;
+        uid = user.uid;  
+        var address = user.address;
+        console.log(name);
+        console.log(email);
+        console.log(uid);
+        console.log(photoUrl);
+        }
+
+    }
+    function update()
+    {
+        var user = firebase.auth().currentUser;
+        var userId = user.uid;
+        firebase.database().ref('/users/'+userId+'/').set({
+        Address:'address'
+        });
+        firebase.database().ref('/users/'+userId+'/posts/').set({
+        post1:'post1',
+        post2:'post2'
+        });
+    }
+    </script>
+</head>
+<body>
+<!-- navigation start-->
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div id="navigation" class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="./index.html">Startup</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <script>
+        function toggle_active()
+        {
+          $("home-nav").removeClass('active');
+          $(this).addClass('active');
+        }
+      </script>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="./register.html"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+      <li><a style="display: none;" href="#" id="login" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><a style="display: block;" href="#" id="logout" onclick="signOut()"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- navigation end-->
+<div class="container-fluid">
+<div style="height:400px;">
+<!-- login from start-->
+<div style="height:50px;margin-bottom:50px;"></div>
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="panel panel-default col-sm-8 container-fluid">
+    <div class="panel-heading text-center">Register</div>
+    <div class="panel-body">
+      <!-- login form start-->
+<div class="row">
+<div class="panel col-sm-11" id="form-panel">
+<form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Email:</label>
+            <div class="col-sm-10">
+            <input class="form-control" id="email" placeholder="Enter email" type="email" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd">Password:</label>
+            <div class="col-sm-10">
+            <input class="form-control" id="pwd" placeholder="Enter password" type="password" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="phno">Contact no:</label>
+            <div class="col-sm-10">
+            <input class="form-control" id="email" placeholder="Enter ph no" type="text"/>
+            </div>
+        </div>
+         <div class="form-group">
+        <label class="control-label col-sm-2" for="address">Address:</label>
+        <div class="col-sm-10">
+        <textarea class="form-control" rows="5" id="address"></textarea>
+        </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+            <button type="button" id="crtAcc" class="btn btn-default" onclick="">Create Account</button>
+            </div>
+        </div>
+</form>    
+</div>
+</div>
+    <!-- login from end-->    
+    </div>
+  </div>
+  <div class="col-sm-2"></div>
+  </div>
+</div>
+<!-- login from end-->
+</div>
+  <button onclick="update()">create</button>
+   <div class="container-fluid" id="footer">
+    <script>
+    $(function(){
+      $("#footer").load("footer.html"); 
+    });</script>
+    </div>
+</div>
+<div id="login-modal">
+    <script>
+    $(function(){
+      $("#login-modal").load("modal.html"); 
+    });</script>
+</div>
+</body>
+</html>
